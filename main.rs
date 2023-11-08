@@ -10,6 +10,9 @@ fn read_bytes_until_null(filename: &str, offset: u64) -> io::Result<Vec<u8>> {
 
     let mut buffer = Vec::new();
     file.read_until(b'\x00', &mut buffer)?;
+    if buffer.last() == Some(&0) {
+        buffer.pop();
+    }
 
     Ok(buffer)
 }
