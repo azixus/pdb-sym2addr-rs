@@ -9,5 +9,5 @@ edition = "2021"
 pdb = "0.8.0"
 
 [[bin]]
-name = "pdb-sym2addr-rs"
+name = "pdb-sym2addr"
 path = "main.rs"
